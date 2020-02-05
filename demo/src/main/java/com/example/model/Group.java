@@ -18,7 +18,7 @@ public class Group {
 
     public Group(GroupDTO group){
         this.code = group.getCode();
-        this.subgroup = group.getSubgroupDTO().stream().map(Subgroup::new).collect(Collectors.toList());
+        this.subgroup = group.getSubgroupDTO()!=null ? group.getSubgroupDTO().stream().map(Subgroup::new).collect(Collectors.toList()):null;
     }
 
     public Group(String code, String group, List<Subgroup> subgroup) {

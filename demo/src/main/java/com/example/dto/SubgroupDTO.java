@@ -14,6 +14,10 @@ public class  SubgroupDTO {
         this.code = subGroup.getCode();
     }
 
+    public SubgroupDTO() {
+
+    }
+
     public SubgroupDTO(String code) {
         this.code = code;
     }

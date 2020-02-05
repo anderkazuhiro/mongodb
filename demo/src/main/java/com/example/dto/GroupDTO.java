@@ -10,24 +10,24 @@ import java.util.stream.Collectors;
 public class GroupDTO {
 
     private String code;
-    private List<SubgroupDTO> subgroupDTO;
+    private List<SubgroupDTO> subgroup;
 
     public GroupDTO(Group group){
         this.code = group.getCode();
-        this.subgroupDTO = group.getSubgroup().stream().map(SubgroupDTO::new).collect(Collectors.toList());
+        this.subgroup = group.getSubgroup().stream().map(SubgroupDTO::new).collect(Collectors.toList());
     }
-    public GroupDTO(String code, List<SubgroupDTO> subgroupDTO) {
+    public GroupDTO(String code, List<SubgroupDTO> subgroup) {
         this.code = code;
-        this.subgroupDTO = subgroupDTO;
+        this.subgroup = subgroup;
     }
 
 
     public List<SubgroupDTO> getSubgroupDTO() {
-        return subgroupDTO;
+        return subgroup;
     }
 
     public void setSubgroupDTO(List<SubgroupDTO> subgroupDTO) {
-        this.subgroupDTO = subgroupDTO;
+        this.subgroup = subgroupDTO;
     }
 
     public String getCode() {
